@@ -13,4 +13,4 @@ Freecodecamp虽然有中文翻译了，但是还得上codepen.io提交代码。
 - `<body>`对应html代码
 - `<style>`对应css代码
 - bootstrap框架引用写在头文件的`<link href=`里
-- js暂时还没用上，日后再更
+- 为了提高页面加载速度，js引用写在末尾
