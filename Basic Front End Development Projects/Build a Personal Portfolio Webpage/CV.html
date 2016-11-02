@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>一个前端工程师的自我修养 - code by Quincy</title>
+    <style type="text/css">
+#top-banner{
+    text-shadow: 1px 1px 1px #333;
+    color:#34352c;
+    border-bottom-style:solid;
+    border-bottom-width:1px;
+    border-bottom-color:#333;
+    animation: myfirst 15s linear infinite;
+    -moz-animation: myfirst 15s linear infinite;	/* Firefox */
+    -webkit-animation: myfirst 15s linear infinite;	/* Safari 和 Chrome */
+    -o-animation: myfirst 15s linear infinite;	/* Opera */
+    }
+@keyframes myfirst
+{
+0%   {background: #5fd9cd;}
+20%  {background: #eaf786;}
+40%  {background: #ffb5a1;}
+60% {background: #b8f4ff;}
+80%  {background: #ffb5a1;}
+90%  {background: #eaf786;}
+100%   {background: #5fd9cd;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background: #5fd9cd;}
+20%  {background: #eaf786;}
+40%  {background: #ffb5a1;}
+60% {background: #b8f4ff;}
+80%  {background: #ffb5a1;}
+90%  {background: #eaf786;}
+100%   {background: #5fd9cd;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+0%   {background: #5fd9cd;}
+20%  {background: #eaf786;}
+40%  {background: #ffb5a1;}
+60% {background: #b8f4ff;}
+80%  {background: #ffb5a1;}
+90%  {background: #eaf786;}
+100%   {background: #5fd9cd;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {background: #5fd9cd;}
+25%  {background: #eaf786;}
+50%  {background: #ffb5a1;}
+100% {background: #b8f4ff;}
+}
+#foot-banner{
+    background: linear-gradient(to right, #5fd9cd,#eaf786,#ffb5a1,#b8ffb8,#b8f4ff);
+    color:#34352c;
+    border-top-style:solid;
+    border-top-color:#333;
+    border-top-width:1px;
+    }
+#main-page{
+    padding-top:80px;
+}
+#left-part{
+    padding-top:20px;
+}   
+#right-part{
+    border-left-style:dashed;
+    border-left-width:1px;
+    border-left-color:#6f5499;
+}/* 右框架左虚线 */
+#part-2,#part-3,#part-4,#part-5{
+    padding-top:90px;
+}/* 解决顶部固定导航引起的描点偏移 */
+/* 图片渐入动画开始 */
+#first-img{
+    animation: turna 3s linear;
+}
+@-webkit-keyframes turna{
+-webkit-0%{opacity:0;}
+-webkit-25%{opacity:0.25;}
+-webkit-50%{opacity:0.5;}
+-webkit-100%{opacity:1;} 
+}
+@keyframes turna{
+0%{opacity:0;}
+25%{opacity:0.25;}
+50%{opacity:0.5;}
+100%{opacity:1;} 
+}
+/* 图片渐入动画结束 */
+body{
+    font-family:"Microsoft YaHei","微软雅黑","MicrosoftJhengHei","华文细黑","STHeiti","MingLiu"
+}
+/* part-3 */
+#portfolio .portfolio-item {
+  margin: 30px 0 20px;
+
+}
+.portfolio-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.portfolio-hover {
+  background: rgba(0, 0, 0, .7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s,
+}
+.portfolio-hover:hover {
+  opacity: 1;
+}
+.portfolio-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: #fff;
+}
+.portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px;
+}
+
+.portfolio-caption h4 {
+  color: #fff;
+  margin: 0;
+}
+
+.portfolio-caption p {
+  font-size: 13px;
+  margin: 0;
+}
+#linkwindow-1 .portfolio-caption{
+  background-color: #5fd9cd;
+}
+#linkwindow-2 .portfolio-caption{
+  background-color: #eaf786;
+}
+#linkwindow-3 .portfolio-caption{
+  background-color: #ffb5a1;
+}
+#linkwindow-4 .portfolio-caption{
+  background-color: #b8f4ff;
+}
+#linkwindow-5 .portfolio-caption{
+  background-color: #b8ffb8;
+}
+#linkwindow-6 .portfolio-caption{
+  background-color: #ffd8b8;
+}
+/* part-3 end */
+/* 按钮效果开始 */
+.btnsns {
+  display: inline-block;
+  color: #34352c;
+  border: 1px outset #eff0dc;
+  background: #fff;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.btnsns:hover {
+  color: #34352c;
+  border: 1px outset #eff0dc;
+  background: #eff0dc;
+  transform:scale(1.1);
+  transition: 0.2s;
+  box-shadow: 3px 3px 3px #34352c;
+  letter-spacing: 2px;
+} 
+/* 按钮效果结束,copy from codepen*/
+    </style>
+</head>
+<body>
+    <div class="nav navbar-fixed-top"id="top-banner">
+        <div class="container" style="line-height:40px;">
+            <h1 class="text-center" >
+                        一个前端工程师的自我修养
+            </h1>
+        </div>
+    </div>
+
+    <div class="container" id="main-page">
+        <div class="row">
+            <div class="col-xs-2" id="left-part">
+                <div data-spy="affix">
+                    <ul class="nav nav-stacked">
+                        <li><a href="#top"><i class="fa fa-home fa-fw"></i>&nbsp;简介</a></li>
+                        <li><a href="#part-2"><i class="fa fa-address-card fa-fw"></i>&nbsp;照片</a></li>
+                        <li><a href="#part-3"><i class="fa fa-free-code-camp fa-fw"></i>&nbsp;代码</a></li>
+                        <li><a href="#part-4"><i class="fa fa-circle-o-notch fa-fw"></i>&nbsp;<span class="label label-warning">会转晕</span></a></li>
+                        <li><a href="#part-5"><i class="fa fa-handshake-o fa-fw"></i>&nbsp;<span class="label label-success">联系方式</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-10 text-center" id="right-part">
+                <div id="part-1">
+                     <div class="jumbotron" style="background-color:white" id="first-img" >
+                        <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/coinface200.png"></img>
+                        <h1>Hello, this is Quincy.</h1>
+                        <p>作为一个半吊子准计算机专业无业人员，目前正在自学前端coding。</p>
+                        <p>得益于互联网的发展，知识的获取比以往任何时候都更加便利。</p>
+                        <p>所以，我来了。</p>
+                        <p>生有涯而学无涯</p>
+                        <p>虽然不知道未来怎么样，</p>
+                        <p>总是值得一试的吧。</p>
+                        <p><a class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal">关于我的更多信息</a></p>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Quincy的资料</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>性别男</p>
+                                        <p>已婚</p>
+                                        <p>现居郑州</p>
+                                        <p>...</p>
+                                        <p>其他的就猜吧</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="part-2">
+                    <img class=" img-responsive center-block"src="http://1803.img.pp.sohu.com.cn/images/2009/6/9/20/13/122713c8e18g215.jpg">
+                </div>
+                <div id="part-3">
+                    <h2>show</h2>
+                    <div class="row" id="portfolio" >
+                        <div class="col-sm-6 portfolio-item" id="linkwindow-1">
+                            <a href="#" target="_blank" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                <i class="fa fa-external-link fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/codedemolight.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>Wordpress</h4>
+                                <p id="small-text" class="text-muted">博客展示</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 portfolio-item" id="linkwindow-2">
+                            <a href="#" target="_blank" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                <i class="fa fa-external-link fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/codedemolight.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>diccuz!</h4>
+                                <p id="small-text" class="text-muted">在线论坛</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 portfolio-item" id="linkwindow-3">
+                            <a href="#" target="_blank" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                <i class="fa fa-external-link fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/codedemo.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>ThinkSNS</h4>
+                                <p id="small-text" class="text-muted">移动社区</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 portfolio-item" id="linkwindow-4">
+                            <a href="#" target="_blank" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                <i class="fa fa-external-link fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/codedemo.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>bootstrap</h4>
+                                <p id="small-text" class="text-muted">响应式CSS框架</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 portfolio-item" id="linkwindow-5">
+                            <a href="#" target="_blank" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                <i class="fa fa-external-link fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/codedemolight.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>DedeCMS</h4>
+                                <p id="small-text" class="text-muted">综合门户</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 portfolio-item" id="linkwindow-6">
+                            <a href="#" target="_blank" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                <i class="fa fa-external-link fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/codedemolight.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>jQuery</h4>
+                                <p id="small-text" class="text-muted">快速javascript框架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="part-4">
+                    <figure  class="fa fa-spin" ><img class="img-circle img-responsive" src="http://share-quincy.oss-cn-shanghai.aliyuncs.com/image/rainbowcircle-500.png"></figure>
+                    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陀螺&nbsp;&nbsp;&nbsp;<small>万晓利</small></h2>
+                    <p>在田野上转</p><p>在清风里转</p><p>在飘着香的鲜花上转</p><p>在沉默里转</p><p>在孤独里转</p><p>在结着冰的湖面上转</p><p>在欢笑里转</p><p>在泪水里转</p><p>在燃烧着的生命里转</p>
+                    <p>在洁白里转</p><p>在血红里转</p><p>在你已衰老的容颜里转</p><p>如果我可以停下来</p><p>我想把眼睛睁开</p><p>看着你怎么离开</p><p>可是我不能停下来</p><p>也无法为你喝彩</p>
+                    <p>请你把双手松开</p><p>在酒杯里转</p><p>在噩梦里转</p><p>在不可告人的阴谋里转</p><p>在欲望里转</p><p>在挣扎里转</p><p>在东窗事发的麻木里转</p><p>在阳光灿烂的一天</p>
+                    <p>你用手捂着你的脸</p><p>对我说你很疲倦</p><p>你扔下手中的道具</p><p>开始咒骂这场游</p>
+                    <p><span class="label label-info">Info</span>摘自网易云音乐</p>
+                </div>
+                <div id="part-5" style="height:500px">
+                    <hr></br><h2>联系方式</h2></br>
+                    <p>欢迎打扰</p></br></br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-phone fa-fw"></i> <span class="network-name">电话：13838000000</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-weixin fa-fw"></i> <span class="network-name">微信：likequincy</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-weibo fa-fw"></i> <span class="network-name">微博：quincy巧克力</span></a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://github.com/QuincyX" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-github fa-fw"></i> <span class="network-name">github</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/QuincyXu" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/QuincyXu" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">twitter</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/quincyx" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">linkedin</span></a>
+                        </li>
+                        <li>
+                            <a href="http://missingquincyx.tumblr.com/" target="_blank" class="btn btn-default btn-lg btnsns"><i class="fa fa-tumblr fa-fw"></i> <span class="network-name"alt="NSFW">tumblr&nbsp;<span class="label label-warning">NSFW</span></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div id="foot-banner">
+        <div class="container">
+            <h4 class="text-center" id="mycopyright"><i class="fa fa-copyright"></i>Code by Quincy</br></h4>
+        </div>
+    </div>
+ <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
