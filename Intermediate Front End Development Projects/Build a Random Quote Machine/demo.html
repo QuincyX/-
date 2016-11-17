@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Random Quote Machine - code by Quincy</title>
+    <style type="text/css">
+body{
+  background-color:#704d4e;
+  font-family:youyuan;
+  color:#704d4e;
+}
+.locknav{
+  top:100px;
+  right:20%;
+}
+.msg{
+  margin-top:200px;
+  width:500px;
+  padding:30px 30px 30px 30px;
+  border-radius:20px;
+  background-color:white;
+}
+.showtext{
+  font-size:30px;
+}
+.showname{
+  font-size:20px;
+}
+#ckepop{
+  padding-top:20px;
+  padding-bottom:10px;
+}
+    </style>
+</head>
+<body>
+ <body class="body">
+  <ul class="locknav nav nav-stacked" data-spy="affix">
+    <li class="btn btn-primary">我要</li>
+    <li class="btn btn-primary">我还要</li>
+    <li class="btn btn-primary">不要停</li>
+  </ul>
+  <div class="msg center-block">
+    <div class="showtext">
+      <i class="fa fa-quote-left"></i>
+      <span class="showabc"></span>
+      <i class="fa fa-quote-right"></i>
+    </div>
+    <div class="showname text-right">
+      <span class="nameabc">- the name</span>
+    </div>
+    <!-- JiaThis Button BEGIN -->
+    <div id="ckepop">
+      <span class="jiathis_txt">分享到：</span>
+      <a class="jiathis_button_weixin">微信</a>
+      <a class="jiathis_button_tsina">微博</a>
+      <a class="jiathis_button_douban">豆瓣</a>
+      <a class="jiathis_button_qzone">QQ空间</a>
+      <a href="http://www.jiathis.com/share"  class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+      <a class="jiathis_counter_style"></a> </div> 
+      <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+    </div> 
+    <!-- JiaThis Button END -->
+  </div>
+  <div class="cp text-center"><p>code by Quincy</p></div>
+</body>
+ <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+ <script>
+     var colors = ['#7ae7f4', '#f9fc0d', '#caf910', '#feaa19', '#7f4d4d', '#1331ec', '#53edce', '#ee1d6c', "#64662e", "#57cdef", "#7673ee", "#7331eb","#e6de0d","#e74853","#30d110","#fa9c78","#c7c4c3","#432e26"];
+var currentQuote = '', currentAuthor = '';
+function getQuote() {
+  $.ajax({
+    headers: {"X-Mashape-Key":"OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+     },
+    url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
+    success: function(response){
+      var r = JSON.parse(response);
+      currentQuote = r.quote;
+      currentAuthor = r.author;
+      $(".showtext").animate({opacity: 0}, 500,
+        function(){
+          $(this).animate({opacity: 1}, 500);
+          $('.showabc').html(r.quote +"<h1>---这不是华丽的分割线---</h1><h4 class='text-center'>逼格不够买一赠一来凑</h4>"+ r.quote);
+        });
+
+      $(".showname").animate({opacity: 0}, 500,
+        function(){
+          $(this).animate({opacity: 1}, 500);
+          $('.nameabc').html("-By: "+ r.author);
+        });
+
+      var color = Math.floor(Math.random() * colors.length);
+      $(".body").css({
+        backgroundColor: colors[color],
+        color: colors[color]
+      }, 1000);
+    }
+  });
+}
+$(document).ready(function() {
+  getQuote();
+  $('.btn-primary').on('click', getQuote);
+});
+ </script>
+</body>
+</html>
